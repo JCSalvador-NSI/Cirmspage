@@ -27,19 +27,26 @@
 
     <h2 id="4-4-10-56">4.4.10.56</h2>
     <ul>
-        <li><strong></strong>: </li>
+        <li><strong class="hotfix">HF_63808</strong>: Include checker of duplicate `promoqty` records for non-product patch updates</li>
+        <li><strong class="hotfix">HF_63808</strong>: Include additional condition for multiple records with same `productid`,`type`,`branchid` and `qty` values</li>
+        <li><strong class="hotfix">HF_63808</strong>: Transferred the delete query away from the else-statement, in order to be performed even with exisiting promoqty wid</li>
+        <li><strong class="hotfix">HF_63808</strong>: Perform sql delete immediately during sync process if specific productid has more than one record with same qty value in promoqty table</li>
     </ul>
     <h2 id="4-4-10-55">4.4.10.55</h2>
     <ul>
-        <li><strong></strong>: </li>
+        <li><strong class="hotfix">HF_63608</strong>: Do not allow printing receipt footer 1 for non-PTU clients if it is exactly worded as "THIS SERVES AS AN OFFICIAL RECEIPT."</li>
+        <li><strong class="hotfix">HF_63608</strong>: Allow custom OR footer if client has no PTU and does not contain "THIS SERVES AS AN OFFICIAL RECEIPT."</li>
+        <li><strong class="hotfix">HF_63608</strong>: Added try-catch exception handling to printpage_receipt_new() function</li>
     </ul>
     <h2 id="4-4-10-54">4.4.10.54</h2>
     <ul>
-        <li><strong></strong>: </li>
+        <li><strong class="hotfix">HF_63619</strong>: Skip License Updating ONLY if License_Key_Id is not 0</li>
+        <li><strong class="hotfix">HF_63619</strong>: Minor refactor to remove wasLicenseAlreadyConfiguredOnPOS since it was only used once</li>
     </ul>
     <h2 id="4-4-10-53">4.4.10.53</h2>
     <ul>
-        <li><strong></strong>: </li>
+        <li><strong class="hotfix">HF_60198</strong>: Commented un-used line of code</li>
+        <li><strong class="hotfix">HF_60198</strong>: Correct spelling in LOGS</li>
     </ul>
     <h2 id="4-4-10-52">4.4.10.52</h2>
     <ul>
