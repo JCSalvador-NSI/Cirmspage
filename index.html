@@ -5,7 +5,187 @@
 
 <body style="color: white; background-color: gray;">
 
-<h1>CIRMS RetailPOS v5</h1>
+    <h1>CIRMS RetailPOS v5</h1>
+
+    <h1 id="retailpos-v5-cirms">RetailPOS v5 CIRMS</h1>
+    <h2 id="version-4-4-x-x">version 4.4.x.x</h2>
+    <h2 id="4-4-10-52">4.4.10.52</h2>
+    <ul>
+        <li><strong>FT_63423</strong>: Include input values for cash denomination on T logs</li>
+        <li><strong>HF_62238</strong>: Removed hard-coded 5 seconds delay.</li>
+        <li><strong>HF_62238</strong>: Write to text file [TerminalNoOnWeb.txt] Terminal No. from web</li>
+        <li><strong>HF_62238</strong>: Alert user if terminal no. is not on cirms. Then, close App.</li>
+        <li><strong>HF_62238</strong>: Added new function WRITE_ERRLOG, to write errors to errlog.txt file</li>
+        <li><strong>HF_61410</strong>: Fix issue where immediately pressing ENTER even on the username text box in
+            Permission Code form will initiate the done_process method</li>
+        <li><strong>HF_61410</strong>: Update progress bar text. From &quot;Start Syncing&quot; to &quot;Initializing
+            Database&quot;</li>
+    </ul>
+    <h2 id="4-4-10-51">4.4.10.51</h2>
+    <ul>
+        <li><strong>HF_62204</strong>: Fix FormatException thrown when getting new cutofftime from database.</li>
+    </ul>
+    <h2 id="4-4-10-50">4.4.10.50</h2>
+    <ul>
+        <li><strong>FT_62244</strong>: NEW Progress Bar for Checking of Database.</li>
+    </ul>
+    <h2 id="4-4-10-49">4.4.10.49</h2>
+    <ul>
+        <li><strong>HF_62655</strong>: Reworked readings sync.</li>
+    </ul>
+    <h2 id="4-4-10-48">4.4.10.48</h2>
+    <ul>
+        <li><strong>FT_62233</strong>: NEW POS setting &#39;POS License Check Day&#39;<ul>
+                <li>Update expiration of license, at least once a month.</li>
+                <li>Apply only, if not within &#39;alert days expiration&#39;.</li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="4-4-10-47">4.4.10.47</h2>
+    <ul>
+        <li><strong>HF_62801</strong>: FIX Exception on LastCompleteSyncDate.</li>
+        <li><strong>HF_62462</strong>: FIX product patch batch validation to remove invalid products instead of ending
+            patch
+            sync.</li>
+    </ul>
+    <h2 id="4-4-10-46">4.4.10.46</h2>
+    <ul>
+        <li><strong>HF_62807</strong>: FIX issue where duplicates appear during initialization of Novelty Items.</li>
+    </ul>
+    <h2 id="4-4-10-45">4.4.10.45</h2>
+    <ul>
+        <li><strong>HF_62548</strong>: FIX issue where product promo would not apply correctly even if it was already
+            expired.</li>
+    </ul>
+    <h2 id="4-4-10-44">4.4.10.44</h2>
+    <ul>
+        <li><strong>HF_62252</strong>: Handle 404 status code on method SendPosVersionAsync() and
+            PostAsyncHttpContent().
+        </li>
+        <li><strong>HF_62252</strong>: FIX JSON Object error on Checking Terminal no on CIRMS.</li>
+    </ul>
+    <h2 id="4-4-10-43">4.4.10.43</h2>
+    <ul>
+        <li><strong>HF_62232</strong>: Check if AutoUpdate is enabled, before running the CheckSystemUpdates() method.
+        </li>
+    </ul>
+    <h2 id="4-4-10-42">4.4.10.42</h2>
+    <ul>
+        <li><strong>HF_62072</strong>: FIX code where user references could not be parsed.</li>
+    </ul>
+    <h2 id="4-4-10-41">4.4.10.41</h2>
+    <ul>
+        <li><strong>HF_61894</strong>: Optimize Novelty Item identifying.</li>
+    </ul>
+    <h2 id="4-4-10-40">4.4.10.40</h2>
+    <ul>
+        <li><strong>FT_61301</strong>: Add automatic appending of -api to CIRMS portion of hostname and add status
+            checker
+            request.</li>
+    </ul>
+    <h2 id="4-4-10-39">4.4.10.39</h2>
+    <ul>
+        <li><strong>HF_61193</strong>: FIX for FARMERS accred format.</li>
+    </ul>
+    <h2 id="4-4-10-38">4.4.10.38</h2>
+    <ul>
+        <li><strong>FT_60544</strong>: FIX permission retrieval.</li>
+    </ul>
+    <h2 id="4-4-10-37">4.4.10.37</h2>
+    <ul>
+        <li><strong>FT_60544</strong>: Integrate Novelty Items in CIRMS POS but exclude GC Excess.</li>
+    </ul>
+    <h2 id="4-4-10-36">4.4.10.36</h2>
+    <ul>
+        <li><strong>HF_60580</strong>: Fix collection retrieval queries and sync transactions that have unknown payment
+            methods</li>
+    </ul>
+    <h2 id="4-4-10-35">4.4.10.35</h2>
+    <ul>
+        <li><strong>HF_60070</strong>: Revert query change in processing Wholesale Price QTY in Patch File Rework.</li>
+        <li><strong>HF_60330</strong>: Remove flag that prevented GET data portion of sync from reinitializing.</li>
+    </ul>
+    <h2 id="4-4-10-34">4.4.10.34</h2>
+    <ul>
+        <li><strong>FT_56694</strong>: Add setting to enable additional transaction options on frmMenu depending on void
+            permissions if false.</li>
+        <li><strong>FT_57558</strong>: Add UploadCustomerForm.<ul>
+                <li>Add ability to add Customer from POS end via <strong>F2</strong> &gt; <strong>F1</strong>.</li>
+                <li>Add permission check for Customer Create.</li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="4-4-10-33">4.4.10.33</h2>
+    <ul>
+        <li><strong>HF_53223</strong>: Refactor sales validation post sync so it removes only the synced items.</li>
+        <li><strong>FT_58559</strong>: Add POS unlock feature.</li>
+        <li><strong>HF_59141</strong>: Show customer info in printout, even if WID=0.</li>
+    </ul>
+    <h2 id="4-4-10-32">4.4.10.32</h2>
+    <ul>
+        <li><strong>FT_57607</strong>: Add character expansion to databasebackuplocation column in possettings.</li>
+        <li><strong>FT_57066</strong>: Updated dialog messages.</li>
+        <li><strong>FT_57066</strong>: Corrected some grammar and spelling errors for license logs and sql queries.</li>
+        <li><strong>FT_57066</strong>: Updated frmError constructor and fncFilter.alert functions to support Chinese
+            fonts.
+        </li>
+        <li><strong>FT_57066</strong>: Fixed checking of license state and license validity.</li>
+    </ul>
+    <h2 id="4-4-10-31">4.4.10.31</h2>
+    <ul>
+        <li><strong>FT_57607</strong>: Rework product patch feature.<ul>
+                <li>Added ProductBatch class.</li>
+                <li>Added mechanism for downloading file.</li>
+                <li>Added mechanism for asynchronously reading file.</li>
+                <li>Renamed json reading function for better readability.</li>
+                <li>Reworked progress bar reporting for patch.</li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="4-4-10-30">4.4.10.30</h2>
+    <h2 id="4-4-10-29">4.4.10.29</h2>
+    <h2 id="4-4-10-28">4.4.10.28</h2>
+    <h2 id="4-4-10-27">4.4.10.27</h2>
+    <h2 id="4-4-10-26">4.4.10.26</h2>
+    <h2 id="4-4-10-25">4.4.10.25</h2>
+    <h2 id="4-4-10-24">4.4.10.24</h2>
+    <h2 id="4-4-10-23">4.4.10.23</h2>
+    <h2 id="4-4-10-22">4.4.10.22</h2>
+    <h2 id="4-4-10-21">4.4.10.21</h2>
+    <h2 id="4-4-10-20">4.4.10.20</h2>
+    <h2 id="4-4-10-19">4.4.10.19</h2>
+    <h2 id="4-4-10-18">4.4.10.18</h2>
+    <h2 id="4-4-10-17">4.4.10.17</h2>
+    <h2 id="4-4-10-16">4.4.10.16</h2>
+    <h2 id="4-4-10-15">4.4.10.15</h2>
+    <h2 id="4-4-10-14">4.4.10.14</h2>
+    <h2 id="4-4-10-13">4.4.10.13</h2>
+    <h2 id="4-4-10-12">4.4.10.12</h2>
+    <h2 id="4-4-10-11">4.4.10.11</h2>
+    <h2 id="4-4-10-09">4.4.10.09</h2>
+    <h2 id="4-4-10-08">4.4.10.08</h2>
+    <h2 id="4-4-10-07">4.4.10.07</h2>
+    <h2 id="4-4-10-06">4.4.10.06</h2>
+    <h2 id="4-4-10-05">4.4.10.05</h2>
+    <h2 id="4-4-10-04">4.4.10.04</h2>
+    <h2 id="4-4-10-03">4.4.10.03</h2>
+    <h2 id="4-4-10-02">4.4.10.02</h2>
+    <h2 id="4-4-10-01">4.4.10.01</h2>
+    <h2 id="4-4-10-0">4.4.10.0</h2>
+    <h2 id="4-4-09-10">4.4.09.10</h2>
+    <h2 id="4-4-08-10">4.4.08.10</h2>
+    <h2 id="4-4-08-09">4.4.08.09</h2>
+    <h2 id="4-4-08-08">4.4.08.08</h2>
+    <h2 id="4-4-08-07">4.4.08.07</h2>
+    <ul>
+        <li>Fix Product Repository.</li>
+        <li>Removed resyncing of sales.</li>
+        <li>Add Fody to minimized files to be deploy.</li>
+    </ul>
+    <h2 id="4-4-08-06">4.4.08.06</h2>
+    <ul>
+        <li>Fix the productsearch enable the use of allowzeroprice settings.</li>
+    </ul>
 
 </body>
 
