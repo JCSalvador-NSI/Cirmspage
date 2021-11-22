@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    body
+    {
+        color: rgb(193, 201, 194);
+        background-color: rgb(24, 22, 22);
+    }
+    .feature 
+    {
+        color: rgb(168, 191, 240);
+    }
+    .hotfix 
+    {
+        color: rgb(56, 148, 71);
+    }
+</style>
+
+<title>RetailPOS v5 CIRMS</title>
+
+<body>
+
+    <h1 id="retailpos-v5-cirms">RetailPOS v5 CIRMS</h1>
+
+    <h2 id="version-4-4-x-x">version 4.4.x.x</h2>
+
+    <h2 id="4-4-11-09">4.4.11.09</h2>
+    <ul>
+        <li><strong>Check detailed info in PR #109 and #110 in POS Repo.</strong></li>
+        <li><strong class="hotfix">HF_66844</strong>: Fix to Refund Form exception by adding COALESCE wrapping on query.</li>
+        <li><strong class="hotfix">HF_66844</strong>: Fix issue where refunding item of transaction which has expired member causes invisible alert form.</li>
+        <li><strong class="hotfix">HF_62758</strong>: Add memo feature.</li>
+    </ul>
+    <h2 id="4-4-11-08">4.4.11.08</h2>
+    <ul>
+        <li><strong>Check detailed info in PR #106 in POS Repo.</strong></li>
+        <li><strong class="hotfix">HF_66668</strong>: Fixed F10 Package button being enabled when entering product.</li>
+    </ul>
+    <h2 id="4-4-11-07">4.4.11.07</h2>
+    <ul>
+        <li><strong>Check detailed info in PR #100 in POS Repo.</strong></li>
+        <li><strong class="hotfix">HF_65906</strong>: Add additional conditions to include Discontinued Products in Barcode search</li>
+    </ul>
+    <h2 id="4-4-11-06">4.4.11.06</h2>
+    <ul>
+        <li><strong>Check detailed info in PR #95 in POS Repo.</strong></li>
+        <li><strong class="hotfix">HF_65657</strong>: Cherrypick modification to add total QTY on ALTPOS mainform UI</li>
+    </ul>
+    <h2 id="4-4-11-05">4.4.11.05</h2>
+    <ul>
+        <li><strong>Check detailed info in PR #94 in POS Repo.</strong></li>
+        <li><strong class="hotfix">HF_64856</strong>: Allow optional backups on startup when setting is enabled</li>
+        <li><strong class="hotfix">HF_64856</strong>: Adjust permission of force backup button</li>
+    </ul>
+    <h2 id="4-4-11-04">4.4.11.04</h2>
+    <ul>
+        <li><strong>Check detailed info in PR #92 in POS Repo.</strong></li>
+        <li><strong class="hotfix">HF_64724</strong>: Add proper initialization on reprint transactions to further prevent issues in case one of the OR conditions in the previous build pass the condition</li>
+    </ul>
+    <h2 id="4-4-11-03">4.4.11.03</h2>
+    <ul>
+        <li><strong>Check detailed info in PR #91 in POS Repo.</strong></li>
+        <li><strong class="hotfix">HF_64724</strong>: Fix issue where printing/reprinting presents a NullRef exception due to customer unavailability</li>
+    </ul>
+    <h2 id="4-4-11-02">4.4.11.02</h2>
+    <ul>
+        <li><strong>Check detailed info in PR #89, #89, and #90 in POS Repo.</strong></li>
+        <li><strong class="hotfix">HF_63577</strong>: Fix issue where Update Counts would not update if the downloaded items exceed the original update count</li>
+        <li><strong class="hotfix">HF_63695</strong>: Refactor code and remove contradictory + unnecessary condition for assigning of customer info</li>
+        <li><strong class="hotfix">HF_59908</strong>: Add boolean flag to cls_POSTransaction object to check during payment</li>
+        <li><strong class="hotfix">HF_59908</strong>: Add log at the end of transaction removal</li>
+    </ul>
+    <h2 id="4-4-11-01">4.4.11.01</h2>
+    <ul>
+        <li><strong>Check detailed info in PR # 87, in POS Repo.</strong></li>
+        <li><strong class="hotfix">HF_64476</strong>: Restore removed conditions and sql queries for y-read</li>
+        <li><strong class="hotfix">HF_64476</strong>: Restored y-read conditions for other fncHardware functions</li>
+        <li><strong class="hotfix">HF_64476</strong>: Restored additional argument for get_summary_data to include ReadType</li>
+        <li><strong class="hotfix">HF_64476</strong>: Restored y-read conditions for the following zreadFunc functions: generate_posxyzread() and generate_posxyzread_firstday()</li>
+    </ul>
+    <h2 id="4-4-11-00">4.4.11.00</h2>
+    <ul>
+        <li><strong>Check detailed info in PR # 82, in POS Repo.</strong></li>
+        <li><strong class="feature">FT_52750</strong>: add settings for enable/disable feature on additional USER permission</li>
+        <li><strong class="feature">FT_51829</strong>: Encryption of C and T logs</li>
+        <li><strong class="hotfix">HF_52223</strong>: [NORTHTILES] Customized feature in POS is gone after POS update</li>
+        <li><strong class="hotfix">HF_52990</strong>: fix permission code issue when retyping correct password</li>
+        <li><strong class="hotfix">HF_52990</strong>: Add "Gift Cheque Excess" product if doesn't exist on database</li>
+        <li><strong class="hotfix">HF_52990</strong>: Changed the way of getting the gcexcess when reprinting or refunding</li>
+        <li><strong class="hotfix">HF_52990</strong>: Moved the Fix Gift cheque payment posd to Superadmin form [button f5]</li>
+        <li><strong class="hotfix">HF_52990</strong>: Fix issue where other Superadmin Tools did not work</li>
+        <li><strong class="hotfix">HF_52990</strong>: Fix UI alignments and set SyncForm theme on initialization</li>
+        <li><strong class="hotfix">HF_52990</strong>: Fix old data automation</li>
+        <li><strong class="hotfix">HF_52990</strong>: Fix issue where GC excess listed as product in printout</li>
+        <li><strong class="hotfix">HF_54094</strong>: Amend printout for BIR Reports (date-ranged Z-read) to represent correct tax values</li>
+        <li><strong>...and more fixes not on this list.</strong></li>
+    </ul>
+    <h2 id="4-4-10-56">4.4.10.56</h2>
+    <ul>
+        <li><strong class="hotfix">HF_63808</strong>: Include checker of duplicate `promoqty` records for non-product patch updates</li>
+        <li><strong class="hotfix">HF_63808</strong>: Include additional condition for multiple records with same `productid`,`type`,`branchid` and `qty` values</li>
+        <li><strong class="hotfix">HF_63808</strong>: Transferred the delete query away from the else-statement, in order to be performed even with exisiting promoqty wid</li>
+        <li><strong class="hotfix">HF_63808</strong>: Perform sql delete immediately during sync process if specific productid has more than one record with same qty value in promoqty table</li>
+    </ul>
+    <h2 id="4-4-10-55">4.4.10.55</h2>
+    <ul>
+        <li><strong class="hotfix">HF_63608</strong>: Do not allow printing receipt footer 1 for non-PTU clients if it is exactly worded as "THIS SERVES AS AN OFFICIAL RECEIPT."</li>
+        <li><strong class="hotfix">HF_63608</strong>: Allow custom OR footer if client has no PTU and does not contain "THIS SERVES AS AN OFFICIAL RECEIPT."</li>
+        <li><strong class="hotfix">HF_63608</strong>: Added try-catch exception handling to printpage_receipt_new() function</li>
+    </ul>
+    <h2 id="4-4-10-54">4.4.10.54</h2>
+    <ul>
+        <li><strong class="hotfix">HF_63619</strong>: Skip License Updating ONLY if License_Key_Id is not 0</li>
+        <li><strong class="hotfix">HF_63619</strong>: Minor refactor to remove wasLicenseAlreadyConfiguredOnPOS since it was only used once</li>
+    </ul>
+    <h2 id="4-4-10-53">4.4.10.53</h2>
+    <ul>
+        <li><strong class="hotfix">HF_60198</strong>: Commented un-used line of code</li>
+        <li><strong class="hotfix">HF_60198</strong>: Correct spelling in LOGS</li>
+    </ul>
+    <h2 id="4-4-10-52">4.4.10.52</h2>
+    <ul>
+        <li><strong class="feature">FT_63423</strong>: Include input values for cash denomination on T logs</li>
+        <li><strong class="hotfix">HF_62238</strong>: Removed hard-coded 5 seconds delay.</li>
+        <li><strong class="hotfix">HF_62238</strong>: Write to text file [TerminalNoOnWeb.txt] Terminal No. from web</li>
+        <li><strong class="hotfix">HF_62238</strong>: Alert user if terminal no. is not on cirms. Then, close App.</li>
+        <li><strong class="hotfix">HF_62238</strong>: Added new function WRITE_ERRLOG, to write errors to errlog.txt file</li>
+        <li><strong class="hotfix">HF_61410</strong>: Fix issue where immediately pressing ENTER even on the username text box in Permission Code form will initiate the done_process method</li>
+        <li><strong class="hotfix">HF_61410</strong>: Update progress bar text. From &quot;Start Syncing&quot; to &quot;Initializing Database&quot;</li>
+    </ul>
+    <h2 id="4-4-10-51">4.4.10.51</h2>
+    <ul>
+        <li><strong class="hotfix">HF_62204</strong>: Fix FormatException thrown when getting new cutofftime from database.</li>
+    </ul>
+    <h2 id="4-4-10-50">4.4.10.50</h2>
+    <ul>
+        <li><strong class="feature">FT_62244</strong>: NEW Progress Bar for Checking of Database.</li>
+    </ul>
+    <h2 id="4-4-10-49">4.4.10.49</h2>
+    <ul>
+        <li><strong class="hotfix">HF_62655</strong>: Reworked readings sync.</li>
+    </ul>
+    <h2 id="4-4-10-48">4.4.10.48</h2>
+    <ul>
+        <li><strong class="feature">FT_62233</strong>: NEW POS setting &#39;POS License Check Day&#39;
+            <ul>
+                <li>Update expiration of license, at least once a month.</li>
+                <li>Apply only, if not within &#39;alert days expiration&#39;.</li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="4-4-10-47">4.4.10.47</h2>
+    <ul>
+        <li><strong class="hotfix">HF_62801</strong>: FIX Exception on LastCompleteSyncDate.</li>
+        <li><strong class="hotfix">HF_62462</strong>: FIX product patch batch validation to remove invalid products instead of ending patch sync.</li>
+    </ul>
+    <h2 id="4-4-10-46">4.4.10.46</h2>
+    <ul>
+        <li><strong class="hotfix">HF_62807</strong>: FIX issue where duplicates appear during initialization of Novelty Items.</li>
+    </ul>
+    <h2 id="4-4-10-45">4.4.10.45</h2>
+    <ul>
+        <li><strong class="hotfix">HF_62548</strong>: FIX issue where product promo would not apply correctly even if it was already  expired.</li>
+    </ul>
+    <h2 id="4-4-10-44">4.4.10.44</h2>
+    <ul>
+        <li><strong class="hotfix">HF_62252</strong>: Handle 404 status code on method SendPosVersionAsync() and PostAsyncHttpContent().</li>
+        <li><strong class="hotfix">HF_62252</strong>: FIX JSON Object error on Checking Terminal no on CIRMS.</li>
+    </ul>
+    <h2 id="4-4-10-43">4.4.10.43</h2>
+    <ul>
+        <li><strong class="hotfix">HF_62232</strong>: Check if AutoUpdate is enabled, before running the CheckSystemUpdates() method.</li>
+    </ul>
+    <h2 id="4-4-10-42">4.4.10.42</h2>
+    <ul>
+        <li><strong class="hotfix">HF_62072</strong>: FIX code where user references could not be parsed.</li>
+    </ul>
+    <h2 id="4-4-10-41">4.4.10.41</h2>
+    <ul>
+        <li><strong class="hotfix">HF_61894</strong>: Optimize Novelty Item identifying.</li>
+    </ul>
+    <h2 id="4-4-10-40">4.4.10.40</h2>
+    <ul>
+        <li><strong class="feature">FT_61301</strong>: Add automatic appending of -api to CIRMS portion of hostname and add status checker request.</li>
+    </ul>
+    <h2 id="4-4-10-39">4.4.10.39</h2>
+    <ul>
+        <li><strong class="hotfix">HF_61193</strong>: FIX for FARMERS accred format.</li>
+    </ul>
+    <h2 id="4-4-10-38">4.4.10.38</h2>
+    <ul>
+        <li><strong class="feature">FT_60544</strong>: FIX permission retrieval.</li>
+    </ul>
+    <h2 id="4-4-10-37">4.4.10.37</h2>
+    <ul>
+        <li><strong class="feature">FT_60544</strong>: Integrate Novelty Items in CIRMS POS but exclude GC Excess.</li>
+    </ul>
+    <h2 id="4-4-10-36">4.4.10.36</h2>
+    <ul>
+        <li><strong class="hotfix">HF_60580</strong>: Fix collection retrieval queries and sync transactions that have unknown payment methods</li>
+    </ul>
+    <h2 id="4-4-10-35">4.4.10.35</h2>
+    <ul>
+        <li><strong class="hotfix">HF_60070</strong>: Revert query change in processing Wholesale Price QTY in Patch File Rework.</li>
+        <li><strong class="hotfix">HF_60330</strong>: Remove flag that prevented GET data portion of sync from reinitializing.</li>
+    </ul>
+    <h2 id="4-4-10-34">4.4.10.34</h2>
+    <ul>
+        <li><strong class="feature">FT_56694</strong>: Add setting to enable additional transaction options on frmMenu depending on void permissions if false.</li>
+        <li><strong class="feature">FT_57558</strong>: Add UploadCustomerForm.
+            <ul>
+                <li>Add ability to add Customer from POS end via <strong>F2</strong> &gt; <strong>F1</strong>.</li>
+                <li>Add permission check for Customer Create.</li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="4-4-10-33">4.4.10.33</h2>
+    <ul>
+        <li><strong class="hotfix">HF_53223</strong>: Refactor sales validation post sync so it removes only the synced items.</li>
+        <li><strong class="feature">FT_58559</strong>: Add POS unlock feature.</li>
+        <li><strong class="hotfix">HF_59141</strong>: Show customer info in printout, even if WID=0.</li>
+    </ul>
+    <h2 id="4-4-10-32">4.4.10.32</h2>
+    <ul>
+        <li><strong class="feature">FT_57607</strong>: Add character expansion to databasebackuplocation column in possettings.</li>
+        <li><strong class="feature">FT_57066</strong>: Updated dialog messages.</li>
+        <li><strong class="feature">FT_57066</strong>: Corrected some grammar and spelling errors for license logs and sql queries.</li>
+        <li><strong class="feature">FT_57066</strong>: Updated frmError constructor and fncFilter.alert functions to support Chinese fonts.</li>
+        <li><strong class="feature">FT_57066</strong>: Fixed checking of license state and license validity.</li>
+    </ul>
+    <h2 id="4-4-10-31">4.4.10.31</h2>
+    <ul>
+        <li><strong class="feature">FT_57607</strong>: Rework product patch feature.<ul>
+                <li>Added ProductBatch class.</li>
+                <li>Added mechanism for downloading file.</li>
+                <li>Added mechanism for asynchronously reading file.</li>
+                <li>Renamed json reading function for better readability.</li>
+                <li>Reworked progress bar reporting for patch.</li>
+            </ul>
+        </li>
+    </ul>
+    <h2 id="4-4-10-30">4.4.10.30</h2>
+    <h2 id="4-4-10-29">4.4.10.29</h2>
+    <h2 id="4-4-10-28">4.4.10.28</h2>
+    <h2 id="4-4-10-27">4.4.10.27</h2>
+    <h2 id="4-4-10-26">4.4.10.26</h2>
+    <h2 id="4-4-10-25">4.4.10.25</h2>
+    <h2 id="4-4-10-24">4.4.10.24</h2>
+    <h2 id="4-4-10-23">4.4.10.23</h2>
+    <h2 id="4-4-10-22">4.4.10.22</h2>
+    <h2 id="4-4-10-21">4.4.10.21</h2>
+    <h2 id="4-4-10-20">4.4.10.20</h2>
+    <h2 id="4-4-10-19">4.4.10.19</h2>
+    <h2 id="4-4-10-18">4.4.10.18</h2>
+    <h2 id="4-4-10-17">4.4.10.17</h2>
+    <h2 id="4-4-10-16">4.4.10.16</h2>
+    <h2 id="4-4-10-15">4.4.10.15</h2>
+    <h2 id="4-4-10-14">4.4.10.14</h2>
+    <h2 id="4-4-10-13">4.4.10.13</h2>
+    <h2 id="4-4-10-12">4.4.10.12</h2>
+    <h2 id="4-4-10-11">4.4.10.11</h2>
+    <h2 id="4-4-10-09">4.4.10.09</h2>
+    <h2 id="4-4-10-08">4.4.10.08</h2>
+    <h2 id="4-4-10-07">4.4.10.07</h2>
+    <h2 id="4-4-10-06">4.4.10.06</h2>
+    <h2 id="4-4-10-05">4.4.10.05</h2>
+    <h2 id="4-4-10-04">4.4.10.04</h2>
+    <h2 id="4-4-10-03">4.4.10.03</h2>
+    <h2 id="4-4-10-02">4.4.10.02</h2>
+    <h2 id="4-4-10-01">4.4.10.01</h2>
+    <h2 id="4-4-10-0">4.4.10.0</h2>
+    <h2 id="4-4-09-10">4.4.09.10</h2>
+    <h2 id="4-4-08-10">4.4.08.10</h2>
+    <h2 id="4-4-08-09">4.4.08.09</h2>
+    <h2 id="4-4-08-08">4.4.08.08</h2>
+    <h2 id="4-4-08-07">4.4.08.07</h2>
+    <ul>
+        <li>Fix Product Repository.</li>
+        <li>Removed resyncing of sales.</li>
+        <li>Add Fody to minimized files to be deploy.</li>
+    </ul>
+    <h2 id="4-4-08-06">4.4.08.06</h2>
+    <ul>
+        <li>Fix the productsearch enable the use of allowzeroprice settings.</li>
+    </ul>
+
+</body>
+
+</html>
